@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.cadastroController">
+   <children>
+      <Pane prefHeight="612.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/background.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="112.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="descricaoTxt" layoutX="323.0" layoutY="56.0" opacity="0.89" prefHeight="37.0" prefWidth="415.0" promptText="Ex: Coca Cola 2L" />
+            <ImageView fitHeight="30.0" fitWidth="162.0" layoutX="333.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/descr.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="141.0" layoutX="150.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/codigo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="codTxt" layoutX="163.0" layoutY="56.0" opacity="0.89" prefHeight="37.0" prefWidth="141.0" promptText="Ex: 78955241114" />
+            <ImageView fitHeight="31.0" fitWidth="150.0" layoutX="144.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/preco.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="precoTxt" layoutX="166.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="141.0" promptText="Ex: 10,00" />
+            <ImageView fitHeight="30.0" fitWidth="157.0" layoutX="323.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/peso.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="pesoTxt" layoutX="323.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="99.0" promptText="Ex: 2kg" />
+            <ImageView fx:id="btnNovo" fitHeight="37.0" fitWidth="118.0" layoutX="589.0" layoutY="137.0" onMouseClicked="#cadastrarProduto" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/novoProduto.png" />
+               </image>
+            </ImageView>
+            <TableView layoutX="36.0" layoutY="367.0" prefHeight="200.0" prefWidth="728.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <TextField fx:id="quantidadeTxt" layoutX="440.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="99.0" promptText="Quantidade" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

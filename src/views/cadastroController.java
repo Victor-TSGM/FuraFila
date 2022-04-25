@@ -1,10 +1,13 @@
+package views;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+
+import products.Produto;
+import products.ProdutoDAO;
 
 public class cadastroController {
 
@@ -26,30 +29,31 @@ public class cadastroController {
     private TextField precoTxt;
 
     @FXML
+    private TextField quantidadeTxt;
+
+    @FXML
     void cadastrarProduto(MouseEvent event) {
       String codigo = codTxt.getText();
       String descricao = descricaoTxt.getText();
       String preco = precoTxt.getText();
       String peso = pesoTxt.getText();
+      String quantidade = quantidadeTxt.getText();
 
-    
-
-
-      //banco.cadastrar(Integer.parseInt(codigo), descricao, Double.parseDouble(preco), Double.parseDouble(peso));
-
-      if(codigo.equals("") || descricao.equals("") || preco.equals("") || peso.equals("")){
-        Alert alert = new Alert(AlertType.WARNING);
-        alert.setTitle("Atenção");
-        alert.setHeaderText("Verifique se todos os campos estão preenchidos");
-        alert.show();
+      Produto p = new Produto();
+      ProdutoDAO dao = new ProdutoDAO();   
         
-      }else{
-        banco.cadastrar(Integer.parseInt(codigo), descricao, Double.parseDouble(preco), Double.parseDouble(peso));
-      }
+      p.setCod(Integer.parseInt(codigo));
+      p.setDescricao(descricao);
+      p.setPreco(Double.parseDouble(preco));
+      p.setPeso(Double.parseDouble(peso));
+      p.setQuantidade(Integer.parseInt(quantidade));
+
+      dao.insert(p);
+
     }
 
     @FXML
     void alterarProduto(ActionEvent event) {
-        banco.alterar();
+        
     }
   }
