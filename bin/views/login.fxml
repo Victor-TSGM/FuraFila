@@ -38,30 +38,40 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.loginController">
+<VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.loginController">
    <children>
       <Pane prefHeight="618.0" prefWidth="800.0">
          <children>
-            <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+            <ImageView fitHeight="536.0" fitWidth="811.0" layoutX="-6.0" layoutY="-48.0" pickOnBounds="true">
                <image>
                   <Image url="@assets/background.png" />
                </image>
             </ImageView>
-            <TextField fx:id="userTxt" layoutX="287.0" layoutY="259.0" prefHeight="41.0" prefWidth="226.0" promptText="Usuário" />
-            <TextField fx:id="passwordTxt" layoutX="287.0" layoutY="321.0" prefHeight="41.0" prefWidth="226.0" promptText="Senha" />
-            <ImageView fitHeight="211.0" fitWidth="215.0" layoutX="294.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="userTxt" layoutX="296.0" layoutY="257.0" prefHeight="41.0" prefWidth="226.0" promptText="Usuário" />
+            <TextField fx:id="passwordTxt" layoutX="296.0" layoutY="319.0" prefHeight="41.0" prefWidth="226.0" promptText="Senha" />
+            <ImageView fitHeight="211.0" fitWidth="215.0" layoutX="303.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/logo.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="254.0" fitWidth="310.0" layoutX="255.0" layoutY="88.0" pickOnBounds="true" smooth="false">
+            <ImageView fitHeight="254.0" fitWidth="310.0" layoutX="264.0" layoutY="86.0" pickOnBounds="true" smooth="false">
                <image>
                   <Image url="@assets/logo-texto.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="btnLogin" fitHeight="41.0" fitWidth="158.0" layoutX="340.0" layoutY="402.0" onMouseClicked="#autenticarLogin" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnLogin" fitHeight="41.0" fitWidth="158.0" layoutX="349.0" layoutY="400.0" onMouseClicked="#autenticarLogin" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/login.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="71.0" fitWidth="21.0" layoutX="765.0" layoutY="14.0" onMouseClicked="#closeApp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="hideBtn" fitHeight="41.0" fitWidth="32.0" layoutX="718.0" layoutY="9.0" onMouseClicked="#hideApp" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/hide.png" />
                </image>
             </ImageView>
          </children>

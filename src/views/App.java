@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class App extends Application {
 
@@ -25,12 +26,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
-        
-
         // FXMLLoader loader = new
         // FXMLLoader(this.getClass().getResource("src/fxml/layout.fxml"));
         Parent root = FXMLLoader.load(this.getClass().getResource("login.fxml"));
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(new Scene(root));
         stage.show();
         setStage(stage);

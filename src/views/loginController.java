@@ -11,6 +11,9 @@ import javafx.stage.Stage;
 public class loginController {
 
     @FXML
+    private ImageView hideBtn;
+
+    @FXML
     private ImageView btnLogin;
 
     @FXML
@@ -41,4 +44,14 @@ public class loginController {
         }
     }
 
+    @FXML
+    void closeApp(MouseEvent event) {
+      System.exit(0);
+    }
+
+    @FXML
+    void hideApp(MouseEvent event) {
+      Stage obj = (Stage) hideBtn.getScene().getWindow();
+      obj.setIconified(true);
+    }
 }
