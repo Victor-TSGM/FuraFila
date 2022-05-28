@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -54,33 +55,24 @@
                   <Image url="@assets/logo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="descricaoTxt" layoutX="323.0" layoutY="56.0" opacity="0.89" prefHeight="37.0" prefWidth="442.0" promptText="Ex: Coca Cola 2L" />
-            <ImageView fitHeight="30.0" fitWidth="162.0" layoutX="333.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="124.0" layoutX="324.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/descr.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="141.0" layoutX="150.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="112.0" layoutX="144.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/codigo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="codTxt" layoutX="163.0" layoutY="56.0" opacity="0.89" prefHeight="37.0" prefWidth="112.0" promptText="Ex: 78955241114" />
-            <ImageView fitHeight="31.0" fitWidth="150.0" layoutX="144.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="150.0" layoutX="138.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/preco.png" />
                </image>
             </ImageView>
-            <TextField fx:id="precoTxt" layoutX="166.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="141.0" promptText="Ex: 10,00" />
-            <ImageView fitHeight="30.0" fitWidth="157.0" layoutX="325.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="124.0" layoutX="318.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/peso.png" />
-               </image>
-            </ImageView>
-            <TextField fx:id="pesoTxt" layoutX="323.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="99.0" promptText="Ex: 2kg" />
-            <ImageView fx:id="btnNovo" fitHeight="37.0" fitWidth="118.0" layoutX="666.0" layoutY="137.0" onMouseClicked="#cadastrarProduto" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/novoProduto.png" />
                </image>
             </ImageView>
             <TableView fx:id="ViewTable" layoutX="30.0" layoutY="199.0" onMouseClicked="#ViewTableKeyReleased" prefHeight="201.0" prefWidth="619.0">
@@ -92,20 +84,9 @@
                   <TableColumn fx:id="quantidade" minWidth="0.0" prefWidth="115.20001220703125" text="quantidade" />
               </columns>
             </TableView>
-            <TextField fx:id="quantidadeTxt" layoutX="440.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="207.0" promptText="Quantidade" />
-            <ImageView fitHeight="62.0" fitWidth="169.0" layoutX="440.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="141.0" layoutX="440.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/quantidade.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="44.0" fitWidth="98.0" layoutX="667.0" layoutY="227.0" onMouseClicked="#updateProduct" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/alterar.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="51.0" fitWidth="98.0" layoutX="666.0" layoutY="273.0" onMouseClicked="#deleteProduct" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/excluir.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="28.0" fitWidth="25.0" layoutX="279.0" layoutY="62.0" onMouseClicked="#procuraProduto" pickOnBounds="true" preserveRatio="true">
@@ -122,6 +103,35 @@
                <image>
                   <Image url="@assets/hide.png" />
                </image>
+            </ImageView>
+            <TextField fx:id="codTxt" layoutX="163.0" layoutY="56.0" opacity="0.89" prefHeight="37.0" prefWidth="112.0" promptText="Ex: 78955241114" />
+            <TextField fx:id="descricaoTxt" layoutX="323.0" layoutY="56.0" opacity="0.89" prefHeight="37.0" prefWidth="442.0" promptText="Ex: Coca Cola 2L" />
+            <TextField fx:id="precoTxt" layoutX="166.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="141.0" promptText="Ex: 10,00" />
+            <TextField fx:id="pesoTxt" layoutX="323.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="99.0" promptText="Ex: 2kg" />
+            <TextField fx:id="quantidadeTxt" layoutX="440.0" layoutY="137.0" opacity="0.89" prefHeight="37.0" prefWidth="207.0" promptText="Quantidade" />
+            <ImageView fx:id="btnNovo" fitHeight="37.0" fitWidth="118.0" layoutX="666.0" layoutY="137.0" onMouseClicked="#cadastrarProduto" pickOnBounds="true" preserveRatio="true" style="#btnNovo:hover: -fx-opacity: 0.8;" styleClass="buttonHover">
+               <image>
+                  <Image url="@assets/novoProduto.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="98.0" layoutX="667.0" layoutY="227.0" onMouseClicked="#updateProduct" pickOnBounds="true" preserveRatio="true" styleClass="buttonHover">
+               <image>
+                  <Image url="@assets/alterar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView cache="true" fitHeight="51.0" fitWidth="98.0" layoutX="666.0" layoutY="273.0" onMouseClicked="#deleteProduct" pickOnBounds="true" preserveRatio="true" styleClass="buttonHover">
+               <image>
+                  <Image url="@assets/excluir.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </children>
       </Pane>
