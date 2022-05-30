@@ -8,4 +8,4 @@ A workspace possui três pastas padrões
 
 - `views`: Com Telas FXMLs e Controllers
 - `Connection`: Conexão com banco de dados e manipulação das tabelas.
-- Connection: Pasta destinada para os objetos produtos.
+- `Products`: Pasta destinada para os objetos produtos.
